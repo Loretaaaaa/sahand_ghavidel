@@ -36,20 +36,20 @@ main {
     margin: 0;
   }
 }
-.bare {
+.bar {
   width: 90%;
   border-radius: 10px;
   background-color: #ffe5e2;
   position: relative;
 }
 @media screen and (min-width: 990px) {
-  .bare {
+  .bar {
     height: 60vh;
     font-size: 14px;
   }
 }
 @media screen and (min-width: 990px) {
-  .bare {
+  .bar {
     width: 45%;
   }
 }
