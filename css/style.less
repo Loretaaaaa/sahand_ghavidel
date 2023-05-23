@@ -3,4 +3,37 @@ body{
     background-color: #EBEBEB;
     box-sizing: border-box;
     font-family: 'Overpass', sans-serif;
+}
+
+ .container {
+  width: 500px;
+  z-index: 100;
+  top: 0;
+  left: 0;
+
+
+  .menu_options{
+
+    a{
+        text-decoration: none;
+        color: gray;
+        font-size: 30px;
+        margin-left: 20px;
+        width: 100%;
+    }
+
+    div{
+        padding-top: 16px;
+
+        &:hover{
+            background-color: #fdb1c5;
+            cursor: pointer;
+
+            a{
+                margin-left: 28px;
+            }
+
+        }
+    }
   }
+}
