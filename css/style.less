@@ -3,4 +3,52 @@ body{
     background-color: #EBEBEB;
     box-sizing: border-box;
     font-family: 'Overpass', sans-serif;
+}
+.bare{
+    width: 90%;
+    border-radius: 10px;
+    background-color: #ffe5e2;
+    position: relative;
+  
+    @media screen and (min-width:990px) {
+        height: 60vh;
+        font-size: 14px;
+    }
+  
+    @media screen and (min-width:990px) {
+      width: 45%;
   }
+  }
+  
+ .container {
+  width: 500px;
+  z-index: 100;
+  top: 0;
+  left: 0;
+
+
+  .menu_options{
+
+    a{
+        text-decoration: none;
+        color: gray;
+        font-size: 30px;
+        margin-left: 20px;
+        width: 100%;
+    }
+
+    div{
+        padding-top: 16px;
+
+        &:hover{
+            background-color: #fdb1c5;
+            cursor: pointer;
+
+            a{
+                margin-left: 28px;
+            }
+
+        }
+    }
+  }
+}
