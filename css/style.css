@@ -131,6 +131,8 @@ main {
 }
 .step p {
   padding: 20px;
+  letter-spacing: 2px;
+  line-height: 1.5;
 }
 .container {
   width: 500px;
