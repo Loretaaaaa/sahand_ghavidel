@@ -24,3 +24,16 @@ function activateStep(stepNumber) {
   //Activate Step 1 by default
   activateStep(1);
   
+    //------------------------ menu ----------------
+
+
+    function toggleNavbar() {
+        let navbar = document.getElementById("navbar");
+        navbar.classList.toggle("open");
+      }
+      
+      function closeNavbar() {
+        let navbar = document.getElementById("navbar");
+        navbar.classList.remove("open");
+      }
+  
