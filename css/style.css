@@ -4,22 +4,133 @@ body {
   box-sizing: border-box;
   font-family: 'Overpass', sans-serif;
 }
-.bare {
+main {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 80px;
+  justify-content: center;
+}
+@media screen and (min-width: 990px) {
+  main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+.img {
+  width: 90%;
+  height: 60vh;
+  background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.hdnicewallpapers.com%2FWalls%2FBig%2FNature%2520and%2520Landscape%2FBeautiful_Sunrising_Nature_Image.jpg&f=1&nofb=1);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 990px) {
+  .img {
+    width: 45%;
+    margin: 0;
+  }
+}
+#buttonContainer {
+  display: flex;
+  width: 100%;
+  border-radius: 10px;
+  background-color: #ffe5e2;
+}
+@media screen and (min-width: 990px) {
+  #buttonContainer {
+    font-size: 14px;
+  }
+}
+#buttonContainer > div {
+  width: 100%;
+}
+#buttonContainer > div button {
+  width: 100%;
+  height: 50px;
+  font-size: large;
+  background-color: #b6c9f0;
+  border: none;
+}
+#buttonContainer > div button:hover {
+  background-color: #e9496e;
+  color: white;
+  cursor: pointer;
+}
+#buttonContainer > div button:active {
+  background-color: #ffe5e2;
+  color: black;
+}
+#buttonContainer #step1Button,
+#buttonContainer #step1Button.active {
+  background-color: #b6c9f0;
+  border: none;
+  width: 100%;
+  height: 50px;
+  font-size: large;
+}
+#buttonContainer #step1Button:hover,
+#buttonContainer #step1Button.active:hover {
+  background-color: #e9496e;
+  color: white;
+  cursor: pointer;
+}
+#buttonContainer #step1Button:active,
+#buttonContainer #step1Button.active:active {
+  background-color: #ffe5e2;
+  color: black;
+}
+#buttonContainer #step2Button,
+#buttonContainer #step3Button {
+  background-color: #b6c9f0;
+  border: none;
+  width: 100%;
+  height: 50px;
+  font-size: large;
+}
+#buttonContainer #step2Button:hover,
+#buttonContainer #step3Button:hover {
+  background-color: #e9496e;
+  color: white;
+  cursor: pointer;
+}
+#buttonContainer #step2Button:active,
+#buttonContainer #step3Button:active {
+  background-color: #ffe5e2;
+  color: black;
+}
+.bar {
   width: 90%;
   border-radius: 10px;
   background-color: #ffe5e2;
   position: relative;
 }
 @media screen and (min-width: 990px) {
-  .bare {
+  .bar {
     height: 60vh;
     font-size: 14px;
   }
 }
 @media screen and (min-width: 990px) {
-  .bare {
+  .bar {
     width: 45%;
   }
+}
+.step {
+  display: flex;
+  background-color: #ffe5e2;
+  width: 90%;
+}
+.step h2 {
+  padding-left: 20px;
+}
+.step p {
+  padding: 20px;
 }
 .container {
   width: 500px;
@@ -43,4 +154,87 @@ body {
 }
 .container .menu_options div:hover a {
   margin-left: 28px;
+}
+.container .container_title {
+  display: flex;
+  justify-content: space-between;
+}
+.container .container_title h2 {
+  font-size: 40px;
+  color: #e9495c;
+  font-family: 'Caveat', cursive;
+  margin-left: 20px;
+}
+.container .navbar {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  width: 500px;
+  height: 100vh;
+}
+@media screen and (max-width: 600px) {
+  .container .navbar {
+    width: 100%;
+  }
+}
+.container .navbar.open {
+  display: block;
+}
+.container .close-btn {
+  background-color: transparent;
+  border: none;
+  right: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+}
+.container .close-btn img {
+  width: 30px;
+  position: relative;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.container .close-btn img:nth-of-type(1) {
+  position: absolute;
+  z-index: -10;
+}
+.container .close-btn img:nth-of-type(2):hover {
+  position: absolute;
+  z-index: -100;
+}
+.container .close-btn:hover img:nth-of-type(1) {
+  position: absolute;
+  z-index: 100;
+}
+.container .close-btn:hover img:nth-of-type(2) {
+  position: static;
+  z-index: -10;
+}
+.container .icon {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+.container .icon img {
+  width: 30px;
+  position: relative;
+  cursor: pointer;
+}
+.container .icon img:nth-of-type(1) {
+  position: absolute;
+  z-index: -10;
+}
+.container .icon img:nth-of-type(2):hover {
+  position: absolute;
+  z-index: -100;
+}
+.container .icon:hover img:nth-of-type(1) {
+  position: absolute;
+  z-index: 100;
+}
+.container .icon:hover img:nth-of-type(2) {
+  position: static;
+  z-index: -10;
 }
